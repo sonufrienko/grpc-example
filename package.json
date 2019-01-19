@@ -1,0 +1,27 @@
+{
+  "name": "grpc-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.3.0",
+    "grpc": "^1.18.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start:server": "node server/index.js",
+    "start:client": "node client/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonufrienko/grpc-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonufrienko/grpc-example/issues"
+  },
+  "homepage": "https://github.com/sonufrienko/grpc-example#readme"
+}

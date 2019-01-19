@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+/* 
+* Protocol Buffers specification
+* https://developers.google.com/protocol-buffers/docs/proto3
+*/
+
+// Namespace
+package books;
+
+// Interface to retrieve books
+service BooksService {
+  // Get single book by id
+  rpc findById (IdParams) returns (Book) {};
+  // Get array of books by filter
+  rpc list (BooksFilter) returns (Books) {};
+  // Add book
+  rpc addBook (Book) returns (Response) {};
+  // Update a book
+  rpc updateBook (Book) returns (Response) {};
+  // Delete a book by id
+  rpc deleteBook (IdParams) returns (Response) {};
+  // Listen for updates
+  rpc listen (EmptyParams) returns (stream LiveResponse) {};
+}
+
+// List item
+message Book {
+  int32 id = 1;
+  string title = 2;
+  // Array of string
+  repeated string tags = 3;
+  bool hardcover = 5;
+  float price = 6;
+  // Constant string
+  EnumStockStatus stock_status = 10;
+  // Object
+  BookSize size = 11;
+  reserved "year";
+}
+
+enum EnumStockStatus {
+  OUT_OF_STOCK = 0;
+  IN_STOCK = 1;
+  PRE_ORDER = 2;
+}
+
+message BookSize {
+  int32 width = 1;
+  int32 height = 2;
+}
+
+// List of books
+message Books {
+  repeated Book books = 1;
+}
+
+// Params to get single book or delete
+message IdParams {
+  // book id
+  int32 id = 1;
+}
+
+// Params to search books
+message BooksFilter {
+  string search = 1;
+  float price_from = 2;
+  float price_to = 3;
+  EnumStockStatus stock_status = 4;
+}
+
+message EmptyParams {
+}
+
+message Response {
+  // true - operation succeeds, false - failed
+  bool success = 1;
+  // error description - if failed
+  string error = 2;
+}
+
+message LiveResponse {
+  string date = 1;
+}

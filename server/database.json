@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Book about Node.js",
+    "tags": ["Node.js", "JavaScript", "JS"],
+    "hardcover": true,
+    "price": 129.99,
+    "stock_status": "IN_STOCK",
+    "size": {
+      "width": 8,
+      "height": 16
+    }
+  },
+  {
+    "id": 2,
+    "title": "Book about Front-end",
+    "tags": ["React", "Redux", "Jest"],
+    "hardcover": true,
+    "price": 169.99,
+    "stock_status": "PRE_ORDER",
+    "size": {
+      "width": 8,
+      "height": 16
+    }
+  },
+  {
+    "id": 3,
+    "title": "Book about database",
+    "tags": ["SQL", "MySQL", "SQL Server", "PostgreSQL"],
+    "hardcover": true,
+    "price": 189.99,
+    "stock_status": "IN_STOCK",
+    "size": {
+      "width": 8,
+      "height": 16
+    }
+  },
+  {
+    "id": 4,
+    "title": "Red book",
+    "tags": ["red", "color"],
+    "hardcover": false,
+    "price": 129.99,
+    "stock_status": "IN_STOCK",
+    "size": {
+      "width": 8,
+      "height": 16
+    }
+  },
+  {
+    "id": 5,
+    "title": "Black book",
+    "tags": ["black", "color"],
+    "hardcover": false,
+    "price": 249.99,
+    "stock_status": "OUT_OF_STOCK",
+    "size": {
+      "width": 8,
+      "height": 16
+    }
+  },
+  {
+    "id": 6,
+    "title": "Yellow book",
+    "tags": ["yellow", "book"],
+    "hardcover": false,
+    "price": 99.99,
+    "stock_status": "PRE_ORDER",
+    "size": {
+      "width": 8,
+      "height": 16
+    }
+  }
+]
